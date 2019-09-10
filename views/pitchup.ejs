@@ -1,0 +1,125 @@
+<% include head %>
+
+<div class="super_container">
+	
+	<% include header%>	
+	
+	<% include nav%>	
+	<style>
+		.startupnav
+		{	
+			padding-top: 10px;
+			
+		}
+		.startupnav ul
+{
+	list-style:none;
+	padding-top:20px;
+}
+
+.startupnav ul li
+{
+	display:inline;
+	margin-left:10px;
+}
+
+.startupnav ul li a
+{
+	text-decoration:none;
+	color:darkslategrey;
+}
+
+.startupnav li a:hover
+{
+	text-decoration:none;
+	color:red;
+}
+		</style>
+	
+	<% include menu%>
+    <!-- Intro -->
+
+	<div class="intro">
+		<div class="container">
+			<br><br><br><br>
+			<h1><font color='black'>REGISTER HERE...</font></h1>
+	
+			<div class='startupnav'>
+					<ul>
+						<li><a href='pitchup'><font size='5'>About Startup</font></a></li>
+						<li><a href='prod_details'><font size='5'>Product Details</font></a></li>
+					</ul>	
+				</div>
+
+			<font color='orange'><%= result %></font>
+			<br><br>
+			<font color='black'>
+			<form method='POST' action='/pitchup'>
+				
+			<table border='2'>	
+				
+				<tr>	
+						<td>Enter the name of your startup </td>   
+						<td><input type="text" name="nm" placeholder="Enter name"/></td>
+				</tr>
+				
+				<tr>
+					<td>Enter Username  </td>
+					<td><input type="text" name="unm" placeholder="Enter Username"/></td>
+				</tr>
+				<tr>
+						<td>Enter Password  </td>
+						<td><input type="password" name="pass" placeholder="Enter Password"/></td>
+				</tr>
+				<tr>
+						<td>Enter Present City   </td>
+						<td><input type="text" name="city" placeholder="City"/></td>
+				</tr>
+				<tr>
+						<td>Enter Phone   </td>
+						<td><input type="text" name="mno" placeholder="Enter Phone No."/></td>
+				</tr>			
+			</table>
+			<br><br>
+			<input type="submit" name="submit" value="Register"/>
+			</form>
+		</font>
+		</div>
+	</div>
+
+	<!-- Converter -->
+
+	<div class="converter">
+		
+		<div class="container">
+			
+		</div>
+	</div>
+
+	<!-- Info -->
+
+	<div class="info">
+		<div class="container">
+		THIS IS Pitchup PAGE	
+		</div>
+	</div>
+
+	<!-- News -->
+
+	<div class="news">
+		<div class="container">
+			
+		</div>
+	</div>
+
+	<% include footer%>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

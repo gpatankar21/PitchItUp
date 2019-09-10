@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>pitchitup.com</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Invest project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<% include header%>	
+	<% include nav%>	
+    <% include menu%>
+    
+
+    <!-- Intro -->
+
+	<div class="intro">
+		<div class="container">
+			<font color='black'>
+				<br><br><br><br>
+			<h1><u>Login</u></h1>
+			<font color='orange'><%=data%></font>
+			<br>
+			<form action='/login' method='POST'>
+			<table>
+				<tr>
+					<td>Enter Username:</td>
+					<td><input type='text' name='unm'></td>
+				</tr>
+				<tr>
+					<td>Enter Password:</td>
+					<td><input type='password' name='pass'></td>
+				</tr>
+			</table>
+			<br>	
+				<input type='submit' name='login' value='Login'/>
+			
+			</form>
+			</font>	
+		</div>
+	</div>
+
+	<!-- Converter -->
+
+	<div class="converter">
+		
+		<div class="container">
+			
+		</div>
+	</div>
+
+	<!-- Info -->
+
+	<div class="info">
+		<div class="container">
+		THIS IS LOGIN PAGE	
+		</div>
+	</div>
+
+	<!-- News -->
+
+	<div class="news">
+		<div class="container">
+			
+		</div>
+	</div>
+
+	<% include footer%>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
