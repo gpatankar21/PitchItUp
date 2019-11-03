@@ -1,33 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>pitchitup.com</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Invest project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/responsive.css">
-</head>
-<body>
-
+<% include head %>
 <div class="super_container">
-	<% include home %>
+	
 	<% include header%>	
+	
 	<% include nav%>	
-    <% include menu%>
-    
+	<style>
+		.startupnav
+		{	
+			padding-top: 10px;
+			
+		}
+		.startupnav ul
+{
+	list-style:none;
+	padding-top:20px;
+}
 
+.startupnav ul li
+{
+	display:inline;
+	margin-left:10px;
+}
+
+.startupnav ul li a
+{
+	text-decoration:none;
+	color:darkslategrey;
+}
+
+.startupnav li a:hover
+{
+	text-decoration:none;
+	color:red;
+}
+		</style>	
+	<% include menu%>
     <!-- Intro -->
 
 	<div class="intro">
-		<div class="container">
-			This is Register Page
+		<div class="container" style="margin-top:2%">
+			<br><br><br><br>
+			<center>
+			<h1><font color='black'>REGISTER HERE...</font></h1>
+			<font color="green"><%=result%></font>
+			</center>	
+			<% if(data=='startup')
+			{%>
+			<font color='orange'><%= result %></font>
+			<br><br>
+			<font color='black'>	
+			<form method='POST' action='/pitchup' >
+				<div class="container" style="max-width:60%">
+				<div class="form-group">
+					<label for="exampleInputEmail1">Username</label>
+					<input type="text" class="form-control" name="unm">
+				  </div>
+				  <div class="form-group">
+					<label for="exampleInputPassword1">Email</label>
+					<input type="text" class="form-control" placeholder="Enter a valid email" name="email">
+				  </div>
+				  <div class="form-group">
+					<label for="exampleInputPassword1">Password</label>
+					<input type="password" class="form-control" placeholder="Password Must be of 8 digits and include atleast 1 special symbol" name="pass">
+				  </div>
+				  <div class="form-group">
+					<label for="exampleInputPassword1">Contact Number</label>
+					<input type="text" class="form-control" name="contact">
+				  </div>
+				<center><button type="submit" class="btn btn-primary">Next</button></center>
+			</div>
+			</form>
+			<% }
+			else {%>
+				<form method='POST' action='/invest'>
+					<div class="container" style="max-width:60%">
+					<div class="form-group">
+						<label for="exampleInputEmail1">Username</label>
+						<input type="text" class="form-control">
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputPassword1">Email</label>
+						<input type="text" class="form-control" placeholder="Enter a valid email">
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputPassword1">Password</label>
+						<input type="password" class="form-control" placeholder="Password Must be of 8 digits and include atleast 1 special symbol">
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputPassword1">Contact Number</label>
+						<input type="text" class="form-control">
+					  </div>	
+					<center><button type="submit" class="btn btn-primary">Next</button></center>
+				</div>
+				</form>
+			<% } %>
+
+		</font>
 		</div>
 	</div>
 
@@ -44,7 +112,7 @@
 
 	<div class="info">
 		<div class="container">
-		THIS IS REGISTER PAGE	
+		THIS IS Pitchup PAGE	
 		</div>
 	</div>
 
